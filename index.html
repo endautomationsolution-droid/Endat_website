@@ -31,6 +31,27 @@ nav{position:sticky;top:0;z-index:20;background:rgba(245,243,238,.92);backdrop-f
 .nav-links{display:flex;gap:28px;font-size:13px;font-weight:700}
 .nav-links a:hover{color:var(--accent)}
 .nav-cta{background:var(--ink);color:white;padding:12px 18px;border-radius:999px;font-size:12px;font-weight:800}
+.work-card{overflow:hidden}
+.work-card .work-media{width:100%;aspect-ratio:16/10;overflow:hidden;border-radius:10px;margin-bottom:16px;background:var(--dark)}
+.work-card .work-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.work-card:hover .work-media img{transform:scale(1.05)}
+.mockup{position:relative;overflow:hidden}
+.mockup .mockup-bg{position:absolute;inset:0;z-index:0;opacity:.16}
+.mockup .mockup-bg img{width:100%;height:100%;object-fit:cover}
+.mockup>*:not(.mockup-bg){position:relative;z-index:1}
+.panel-photo{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:10px;margin-bottom:16px}
+.panel-gallery{display:grid;grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:repeat(2,140px);gap:8px;margin-bottom:20px}
+.panel-gallery a{display:block;grid-row:span 2;border-radius:10px;overflow:hidden}
+.panel-gallery a:nth-child(1){grid-row:span 2}
+.panel-gallery a:nth-child(n+2){grid-row:span 1}
+.panel-gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
+.panel-gallery a:hover img{transform:scale(1.06)}
+@media(max-width:720px){.panel-gallery{grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,120px)}.panel-gallery a:nth-child(1){grid-column:span 2;grid-row:span 1}}
+.panel-gallery-b{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:20px}
+.panel-gallery-b a{display:block;border-radius:10px;overflow:hidden;background:#0d1720;aspect-ratio:16/10}
+.panel-gallery-b img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .35s ease}
+.panel-gallery-b a:hover img{transform:scale(1.05)}
+@media(max-width:720px){.panel-gallery-b{grid-template-columns:1fr}}
 .hero{padding:86px 0 70px;border-bottom:1px solid var(--line)}
 .hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:70px;align-items:end}
 .eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.18em;font-weight:900;color:var(--accent);margin-bottom:22px}
@@ -389,8 +410,20 @@ nav{
  <div class="container">
   <div class="section-head"><div class="kicker">01 / Capabilities</div><div><h2 class="section-title">From control panels to customer conversations.</h2><p class="section-intro">The business profile describes ENDAT as a complementary set of engineering and digital capabilities, allowing customers to approach one organization for industrial engineering and modern digital solutions.</p></div></div>
   <div class="split">
-   <div class="panel"><div class="num">DIVISION A</div><h3>Industrial Engineering</h3><p>Practical systems for machines, production lines and industrial applications.</p><ul><li>PLC · HMI · SCADA</li><li>CNC programming & commissioning</li><li>Machine retrofitment & modernization</li><li>Electrical control & panel engineering</li><li>Servo, VFD & motion integration</li><li>Troubleshooting & startup support</li></ul></div>
-   <div class="panel dark"><div class="num">DIVISION B</div><h3>AI & Digital Automation</h3><p>Business systems that automate communication, follow-up, data visibility and digital presence.</p><ul><li>AI Call Receptionist</li><li>WhatsApp Chatbot Solutions</li><li>Follow-up Automation</li><li>Business Data Dashboards</li><li>Business Website Development</li><li>Digital transformation for SMEs / MSMEs</li></ul></div>
+   <div class="panel"><div class="panel-gallery">
+     <a href="images/control-panel.png" target="_blank"><img src="images/control-panel.png" alt="Industrial electrical control panel"></a>
+     <a href="images/retrofit.png" target="_blank"><img src="images/retrofit.png" alt="Machine retrofitment before and after"></a>
+     <a href="images/tia-portal.png" target="_blank"><img src="images/tia-portal.png" alt="TIA Portal PLC programming"></a>
+     <a href="images/iot-scada.png" target="_blank"><img src="images/iot-scada.png" alt="IoT and SCADA dashboard"></a>
+     <a href="images/wincc.png" target="_blank"><img src="images/wincc.png" alt="WinCC SCADA screen"></a>
+     <a href="images/engineering-collage.png" target="_blank"><img src="images/engineering-collage.png" alt="CNC, panel and control engineering work"></a>
+   </div><div class="num">DIVISION A</div><h3>Industrial Engineering</h3><p>Practical systems for machines, production lines and industrial applications.</p><ul><li>PLC · HMI · SCADA</li><li>CNC programming & commissioning</li><li>Machine retrofitment & modernization</li><li>Electrical control & panel engineering</li><li>Servo, VFD & motion integration</li><li>Troubleshooting & startup support</li></ul></div>
+   <div class="panel dark"><div class="panel-gallery-b">
+     <a href="images/ai-call-agent.png" target="_blank"><img src="images/ai-call-agent.png" alt="AI Call Agent dashboard and workflow"></a>
+     <a href="images/whatsapp-automation.png" target="_blank"><img src="images/whatsapp-automation.png" alt="WhatsApp automation and chatbot workflow"></a>
+     <a href="images/dashboard-building.png" target="_blank"><img src="images/dashboard-building.png" alt="Business data dashboard example"></a>
+     <a href="images/website-building.png" target="_blank"><img src="images/website-building.png" alt="Business website design examples"></a>
+   </div><div class="num">DIVISION B</div><h3>AI & Digital Automation</h3><p>Business systems that automate communication, follow-up, data visibility and digital presence.</p><ul><li>AI Call Receptionist</li><li>WhatsApp Chatbot Solutions</li><li>Follow-up Automation</li><li>Business Data Dashboards</li><li>Business Website Development</li><li>Digital transformation for SMEs / MSMEs</li></ul></div>
   </div>
  </div>
 </section>
